@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <title>Gazeta Tab</title>
+  <!-- CSS only -->
+
+  <link rel="stylesheet" href="/style/Bcss/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+  <link rel="stylesheet" href="style/otherCss/bulma.min.css?v1.0.0" />
+  <link rel="stylesheet" href="style/otherCss/bulma-dark.css" />
+  <link rel="stylesheet" href="style/otherCss/all.min.css?v1.0.0" />
+  <link rel="stylesheet" href="style/style.css" />
+
+</head>
+
+<body>
+  <!-- Start of Background Image -->
+  <div class="bg-image img" style="background-image:url('/img/landComp-min\ 2.jpg');
+         height: 52vh">
+  <!-- End of Background Image -->
+  <!-- Start of Clock -->
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <!-- End Of Clock -->
+    <!-- Settings -->
+    <!--   <button id="open-settings" class="button" aria-label="OpenSettings">
+    <i class="fas fa-cog"></i>
+  </button> -->
+
+    <!-- Start For social Midea bar -->
+    <nav>
+      <ul>
+        <li><a href="https://www.facebook.com">
+            <i class="fab fa-facebook-f"></i>
+            <span></span></a>
+        </li>
+        <li><a href="https://twitter.com/">
+            <i class="fab fa-twitter"></i>
+            <span></span></a>
+        </li>
+        <li><a href="https://www.instagram.com/">
+            <i class="fab fa-instagram"></i>
+            <span></span></a>
+        </li>
+        <li><a href="https://www.linkedin.com/">
+            <i class="fab fa-linkedin-in"></i>
+            <span></span></a>
+        </li>
+        <li><a href="https://github.com/">
+            <i class="fab fa-github"></i>
+            <span></span></a>
+        </li>
+        <li><a href="https://www.youtube.com">
+            <i class="fab fa-youtube"></i>
+            <span></span></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- End of Social Media -->
+    <header>
+      <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="view">
+              <section class="section">
+                <div class="container">
+                  <div class="columns">
+                    <div class="column"></div>
+                    <div class="column is-two-thirds">
+                      <h2 class="title">
+                        <span class="title-word title-word-1" style="color: #4285f4 ;"> <img
+                            src="/img/searchet-logo.png" class="sealogo" alt="Search Logo "
+                            style="margin-left: 20px;" /> </span>
+                      </h2>
+                      <form action="/search" id="searchform" method="get" name="searchform">
+                        <div class="field has-addons">
+                          <div class="control is-expanded" style="margin-top: 100px;">
+                            <input class="input" id="roundSearch" type="text" name="q" aria-label="Search" />
+                            <div class="columns" id="commonSites"></div>
+                            <!-- <div class="columns" id="commonSite"></div> -->
+                          </div>
+                          <div class="control">
+                          </div>
+                          <div>
+                          </div>
+                          <!-- id="searchform" -->
+                        </div>
+                      </form>
+                      <!-- <div class="gcse-searchbox-only"></div> -->
+                    </div>
+                    <div class="column"></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- Start of Pill for Container -->
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="smallHeading" style="font-size: 50px;"></h2>
+        <div class="columns" id="commonSites"></div>
+        <!-- <div class="columns" id="commonSite"></div> -->
+      </div>
+    </section>
+    <!-- End of Pill Container -->
+    <div class="scrolling-image-container">
+      <div class="scrolling-image"></div>
+    </div>
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="smallHeading">#Trendign </h2>
+        <div class="columns is-multiline" id="news"></div>
+      </div>
+    </section>
+    <div class="modal" id="settings-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <div class="loader-wrapper">
+          <div class="loader is-loading"></div>
+        </div>
+        <header class="modal-card-head">
+          <p class="modal-card-title">Settings</p>
+          <button class="delete close-modal" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="content">
+            <h2>General Settings</h2>
+            <div id="settings-general"></div>
+            <h2>News Feeds</h2>
+            <div id="settings-feeds"></div>
+            <h2>Advanced Settings</h2>
+            <button id="clear-cache" class="button is-warning">Clear Local Cache</button>
+            <button id="reset-rss-feeds" class="button is-danger">Reset RSS feeds</button>
+            <button id="reset-settings" class="button is-danger">Reset Settings</button>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button id="save-settings" class="button is-success">Save changes</button>
+          <button class="button close-modal">Cancel</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="style/otherJs/sl.js"></script>
+  <script src="style/otherJs/rss-parser.min.js?v1.0.0"></script>
+  <script src="style/otherJs/all.min.js?v1.0.0"></script>
+  <script src="style/otherJs/jquery-3.4.1.slim.min.js?v1.0.0"></script>
+  <script src="main.js?v1.0.0"></script>
+  <script src="style/Bjs/bootstrap.min.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+</body>
+
+</html>

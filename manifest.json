@@ -1,0 +1,16 @@
+{
+  "name": "Gazeta Tab",
+  "description": "Chrome News App that brings you all the local and global news",
+  "version": "0.0.0.1",
+  "chrome_url_overrides": { "newtab": "index.html" },
+  "manifest_version": 2,
+  "permissions": ["topSites", "<all_urls>", "storage", "alarms","tabs", "notifications"],
+  "background": {
+    "scripts": ["jquery-3.4.1.slim.min.js","rss-parser.min.js", "moment.min.js", "axios.min.js", "background.js"],
+    "persistent": false
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "icons": { "16": "/img/icon.png",
+    "48": "/img/icon.png",
+   "128": "/img/icon.png" } 
+}

@@ -1,0 +1,296 @@
+/* .hero {
+  background-image: url("https://source.unsplash.com/random/1920x400");
+  background-size: cover;
+} */
+.box {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+.centre-column {
+  text-align: center !important;
+}
+
+.news-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 100px;
+}
+
+.subtitle {
+  padding-top: 5px;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #c9c9c97d;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.loader {
+  -webkit-animation: spinAround 0.5s infinite linear;
+  animation: spinAround 0.5s infinite linear;
+  border: 2px solid #646464;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 5em;
+  position: relative;
+  width: 5em;
+}
+
+.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.is-loading {
+  position: relative;
+}
+
+.dateSubtitle {
+  font-size: 10px;
+}
+
+.publisherSubtitle {
+  margin-bottom: 0px !important;
+}
+
+/* ==============================================================================================================
+=================================================================================================================
+================================================================================================================= */
+
+.sealogo {
+  width: 250px;
+  height: 150px;
+  text-align: center;
+  margin:0px 45px 0px 0px;
+}
+
+
+.container {
+  /* display: grid; */
+  place-items: center;
+  text-align: center;
+
+}
+
+.title {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  font-size: 70px;
+  /* text-transform: uppercase; */
+}
+
+.smallHeading {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100%;
+  text-align: left;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-inner .active,
+.carousel .carousel-inner .carousel-item {
+  height: 100%
+}
+
+@media (max-width:776px) {
+  .carousel {
+    height: 100%
+  }
+}
+
+/* .navbar {
+  background-color: rgba(0, 0, 0, .2);
+} */
+
+.page-footer,
+.top-nav-collapse {
+  background-color: #929FBA
+}
+
+@media only screen and (max-width:768px) {
+  .navbar {
+    background-color: #929FBA
+  }
+}
+
+/* html,
+body,
+header,
+.carousel {
+  height: 80vh;
+} */
+
+@media (max-width: 740px) {
+
+  html,
+  body,
+  header,
+  .carousel {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+
+  html,
+  body,
+  header,
+  .carousel {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #929FBA !important;
+  }
+}
+
+#roundSearch {
+  
+  align-items: center;
+  border-radius: 20px;
+  margin: -75px 0px 0px 0px;
+  width: 27em;
+  opacity: 85%;
+  /* margin-left: -18px; */
+
+}
+
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+box-sizing: border-box;
+}
+nav{
+  position: fixed;
+  width: 70px;
+  margin-top: 450px;
+  transition: all 0.3s linear;
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
+}
+
+nav li{
+  height: 60px;
+  position:relative;
+}
+
+nav li a{
+  color: white;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+  padding-left:25%;
+  border-bottom: 1px solid rgba(0,0,0,.4);
+  transition: all .3s linear;
+}
+
+nav li:nth-child(1) a{
+  background: #4267B2;
+}
+nav li:nth-child(2) a{
+  background: #1DA1F2;
+}
+nav li:nth-child(3) a{
+  background: #E1306C;
+}
+nav li:nth-child(4) a{
+  background: #2867B2;
+}
+nav li:nth-child(5) a{
+  background: #333;
+}
+nav li:nth-child(6) a{
+  background: #ff0000;
+}
+nav li a i{
+  position:absolute;
+  top: 17px;
+  left: 20px;
+  font-size: 27px;
+}
+ul li a span{
+  display: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+a:hover {
+  z-index:1;
+  width: 200px;
+}
+
+ul li:hover a span{
+  padding-left: 30%;
+  display: block;
+}
+
+@media screen and (max-width: 1060px) {
+  #primary { width:67%; }
+  #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary { width:100%; }
+  #secondary { width:100%; margin:0; border:none; }
+}
+
+.img{
+
+  /* filter: blur(4px); */
+  /* background-repeat: no-repeat; */
+  /* height: 50vh; */
+  background-size: cover;
+  /* background-position: center center ; */
+  /* float: none; */
+  /* position: fixed; */
+    /* object-fit: cover; */
+
+}
+
+/* #clock{
+  color: white;
+  text-align: center;
+} */
+
+.clock {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  font-size: 40px;
+  font-family: Orbitron;
+  letter-spacing: 1px;
+
+}
